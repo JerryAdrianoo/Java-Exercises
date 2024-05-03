@@ -5,12 +5,11 @@ public class Exercise1 {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> number = new ArrayList<>();
         for (int i = 0; i < 3; i++){
-            System.out.println("Type the Number :");
+            System.out.println("Type an Number ");
             int output = scanner.nextInt();
             number.add(output);
         }
-        Exercise1 exercise1 = new Exercise1();
-        exercise1.findNumber(number);
+        findNumber(number);
     }
     public static void findNumber(ArrayList<Integer> test){
         test.sort(null);
