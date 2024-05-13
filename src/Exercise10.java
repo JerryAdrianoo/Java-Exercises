@@ -1,6 +1,6 @@
 public class Exercise10 {
     public static void main(String[] args) {
-        int year = 2020;
+        int year = 2024;
 
         calcularAno(year);
     }
@@ -8,12 +8,13 @@ public class Exercise10 {
     public static boolean calcularAno(int year) {
         boolean bi = false;
 
-        if (year % 4 == 0 || year % 400 == 0) {
+        if ((year % 4 != 0 || year % 100 == 0)){
+            System.out.println("Esse não é um ano bissexto!\n" + bi);
+
+        }
+        else if (year % 4 == 0 || year % 400 == 0) {
             bi = true;
             System.out.println("esse é um ano bissexto!\n" + bi);
-        }
-        else if ((year % 4 != 0 || year % 100 == 0)){
-            System.out.println("Esse não é um ano bissexto!\n" + bi);
         }
 
         return bi;
